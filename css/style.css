@@ -549,6 +549,7 @@ span{
         width:49%;
     }
 }
+/* ipad / tabs screen */
 @media (max-width: 990px){
     .header{
         padding: 2rem 3%;
@@ -641,6 +642,7 @@ span{
         width:100%;
     }
 }
+/* mobiles screen */
 @media (max-width:365px){
     .home-img img, .about-img img{
         width: 90vw;

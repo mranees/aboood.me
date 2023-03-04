@@ -15,7 +15,6 @@ window.onload = function (){
 // navbar class active added
 let sections = document.querySelectorAll('section'),
     navLinks = document.querySelectorAll('header nav a');
-
 window.onscroll = () =>{
   sections.forEach(sec=>{
     let top = window.scrollY;

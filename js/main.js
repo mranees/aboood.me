@@ -6,10 +6,56 @@ menuIcon.onclick = function (){
   navBar.classList.toggle('active');
 };
 
+// setting up sticky header and to top icon
 let header = document.querySelector('header');
 let iconTop = document.querySelector('.footer-icontop');
-window.onload = function (){
+function iconTopToggle(){
   iconTop.classList.toggle('hide');
+}
+
+// setting up light dark theme calculation with hours
+let mainroot = document.querySelector(':root');
+let toggleThemeBtn = document.getElementById('toggle-theme');
+let themeNow = "";
+let d = new Date();
+let hours = d.getHours();
+function testx(){
+  console.log('working');
+}
+function lightTheme(){
+  mainroot.style.setProperty('--bg-color', '#eeeeee');
+  mainroot.style.setProperty('--second-bg-color', '#99e6ec');
+  mainroot.style.setProperty('--text-color', '#1f242d');
+  mainroot.style.setProperty('--main-color', '#00b9d3');
+  toggleThemeBtn.classList.toggle('bxs-moon');
+  toggleThemeBtn.classList.remove('bxs-sun');
+  themeNow = true;
+}
+function darkTheme(){
+  mainroot.style.setProperty('--bg-color', '#1f242d');
+  mainroot.style.setProperty('--second-bg-color', '#323946');
+  mainroot.style.setProperty('--text-color', '#ffffff');
+  mainroot.style.setProperty('--main-color', '#00eeff');
+  toggleThemeBtn.classList.toggle('bxs-sun');
+  toggleThemeBtn.classList.remove('bxs-moon');
+  themeNow = false;
+}
+
+function autoLightDark(){
+  if(hours >= 14){
+    darkTheme();
+  }else{
+    lightTheme();
+  };
+}
+toggleThemeBtn.onclick = function(){
+  themeNow ?  darkTheme() : lightTheme();
+};
+
+// onload actions
+window.onload = function (){
+  iconTopToggle();
+  autoLightDark();
 }
 
 // navbar class active added

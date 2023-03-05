@@ -19,9 +19,7 @@ let toggleThemeBtn = document.getElementById('toggle-theme');
 let themeNow = "";
 let d = new Date();
 let hours = d.getHours();
-function testx(){
-  console.log('working');
-}
+
 function lightTheme(){
   mainroot.style.setProperty('--bg-color', '#eeeeee');
   mainroot.style.setProperty('--second-bg-color', '#99e6ec');
@@ -42,7 +40,7 @@ function darkTheme(){
 }
 
 function autoLightDark(){
-  if(hours >= 14){
+  if(hours >= 16){
     darkTheme();
   }else{
     lightTheme();

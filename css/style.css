@@ -62,6 +62,14 @@ section{
 .btn:hover{
     box-shadow: none;
 }
+.keys{
+    display: inline-block;
+    background: var(--main-color);
+    border-radius: 2rem;
+    color: var(--second-bg-color);
+    padding-inline: 1rem;
+    margin: .2rem;
+}
 /* skill bar modifications */
 .skillbar{
     position: relative;
@@ -334,6 +342,7 @@ span{
 
 .about-img img{
     width: 35vw;
+    transform: scaleX(-1);
 }
 
 .heading{
@@ -441,7 +450,7 @@ span{
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 4rem;
+    padding:0 4rem;
     transform: translateY(100%);
     transition: .5s ease;
 }
@@ -449,11 +458,13 @@ span{
     transform: translate(0);
 }
 .portfolio-layer h4{
-    font-size: 3rem;
+    font-size: 2rem;
+    text-shadow: 0 0 .2rem var(--main-color);
 }
 .portfolio-layer p{
     font-size: 1.6rem;
     margin: .3rem 0 1rem;
+    text-shadow: 0 0 .2rem var(--main-color);
 }
 .portfolio-layer a{
     display: inline-flex;
